@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.window.showInformationMessage('-- Attach Debug Console --');
 
     panel = vscode.window.createWebviewPanel(
-      'testWebView', 'DebugView', vscode.ViewColumn.One, {
+      'testWebView', 'DebugView', vscode.ViewColumn.Two, {
       enableScripts: true,
       retainContextWhenHidden: true
     });

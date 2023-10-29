@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './input.css';
 
 function App() {
   const [state, setState] = useState<String[]>([]);
@@ -9,11 +10,16 @@ function App() {
   });
   return (
     <div>
-      <li>{state.map(m => {
-        // return <li key={count++}>{m}</li>;
-        console.log(m);
-        return <li key={count++}>{m}</li>;
-      })}
+      <button className="btn">Button</button>
+      <button className="btn btn-neutral">Neutral</button>
+      <button className="btn btn-primary">Primary</button>
+      <button className="btn btn-secondary">Secondary</button>
+      <button className="btn btn-accent">Accent</button>
+      <button className="btn btn-ghost">Ghost</button>
+      <button className="btn btn-link">Link</button>
+      <li>{state.map(m =>
+        <li key={count++}>{m}</li>
+      )}
       </li>
     </div>
   );
